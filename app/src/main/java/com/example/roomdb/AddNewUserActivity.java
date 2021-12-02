@@ -18,8 +18,6 @@ public class AddNewUserActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_user);
-        ActionBar ab = getActionBar();
-
 
         EditText firstNameInput = findViewById(R.id.firstNameInput);
         EditText lastNameInput = findViewById(R.id.lastNameInput);
@@ -44,7 +42,6 @@ public class AddNewUserActivity extends AppCompatActivity {
 
     private void saveNewUser(String firstName, String lastName) {
         AppDatabase db = AppDatabase.getDbInstance(this.getApplicationContext());
-
         User user = new User();
         user.firstName = firstName;
         user.lastName = lastName;
