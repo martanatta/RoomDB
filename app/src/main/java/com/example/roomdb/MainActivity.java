@@ -13,18 +13,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.roomdb.db.AppDatabase;
 import com.example.roomdb.db.User;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private UserListAdapter userListAdapter;
+    public UserListAdapter userListAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Button addNewUserButton = findViewById(R.id.addNewUserButton);
+        getSupportActionBar().setSubtitle("Если список не обновился, перезайдите пожалуйста");
+        ExtendedFloatingActionButton addNewUserButton = findViewById(R.id.addNewUserButton);
         addNewUserButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

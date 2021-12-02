@@ -23,13 +23,13 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.MyView
 
     public void setUserList(List<User> userList) {
         this.userList = userList;
-        notifyDataSetChanged();
+//        notifyDataSetChanged();
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.recycler_row, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_person, parent, false);
         return new MyViewHolder(view);
     }
 
@@ -41,7 +41,7 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.MyView
 
     @Override
     public int getItemCount() {
-        return this.userList.size();
+        return userList.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
