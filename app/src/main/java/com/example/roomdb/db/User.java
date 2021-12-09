@@ -10,8 +10,14 @@ public class User {
     public int uid;
 
     @ColumnInfo(name = "first_name")
-    public String firstName;
+    public String name;
 
     @ColumnInfo(name = "last_name")
-    public String lastName;
+    public String surname;
+
+    @ColumnInfo(name = "phone")
+    public String phone;
+
+    @ColumnInfo(name = "Email")
+    public String Email;
 }
